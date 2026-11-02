@@ -107,7 +107,7 @@ dot -Tsvg dependency_graphs/arklib_top_level.dot -o dependency_graphs/arklib_top
 
 ## Dependencies Required
 
-- **Python 3.6+** with standard library
+- **uv**, which selects Python 3.12 with its standard library
 - **Graphviz** for optional visualization (`brew install graphviz` on macOS)
 
 ## Notes

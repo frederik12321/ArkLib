@@ -279,7 +279,7 @@ uv run --no-project --python 3.12 python scripts/module_times.py update .lake/bu
 
 ## Requirements
 
-- Python 3.6+ (for Python scripts)
+- uv (selects Python 3.12 for Python scripts)
 - Lean 4 (for Lean scripts)
 - Graphviz (for dependency visualization)
 - Virtual environment (`.venv`) for Python dependencies
