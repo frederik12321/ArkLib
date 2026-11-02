@@ -3,6 +3,14 @@
 This page is the recommended agent playbook for commands and validation.
 Use it as the main guide for routine local checks.
 
+## Python tooling
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/) for
+repository Python checks. CI uses uv 0.13.6. The uv commands below select Python
+3.12; uv downloads it if needed. Run them from the repository root.
+These checks use only the standard library. `--no-project` runs them without
+installing a Python package or creating a project environment.
+
 ## Dependency versions
 
 Before a large contribution or a forward-port, fetch the intended upstream remote and
@@ -265,7 +273,7 @@ lake exe hachi-runtime
 lake exe sumcheck-runtime
 lake exe fri-extractor-runtime
 ./scripts/check-imports.sh
-python3 ./scripts/check-docs-integrity.py
+uv run --no-project --python 3.12 python ./scripts/check-docs-integrity.py
 python3 ./scripts/kb/lint.py
 ./scripts/test-axiomsweep.sh
 lake exe axiomsweep --check
