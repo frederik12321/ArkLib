@@ -94,7 +94,7 @@ This directory contains various utility scripts for the ArkLib project.
 ### Generate Dependency Graphs
 ```bash
 cd scripts/dependency_analysis
-python generate_dependency_graph.py --root ../../ --output-dir ../../dependency_graphs
+uv run --no-project --python 3.12 python generate_dependency_graph.py --root ../../ --output-dir ../../dependency_graphs
 ```
 
 ### Compile Only
