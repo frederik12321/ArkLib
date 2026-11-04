@@ -12,10 +12,10 @@ Review intervening API additions before writing replacement infrastructure. If t
 checkout contains unrelated work, use a separate worktree for the forward-port and
 leave that work intact.
 
-`lean-toolchain` names the Lean release. `lakefile.toml` pins doc-gen4 and CompPoly to the
-matching release tag and VCVio to an exact commit; Mathlib and PolyFun arrive through those
-packages. `lake-manifest.json` records the exact resolved revision of every package, so read it,
-not this page, for the current versions. A newer PolyFun revision must be validated against VCVio
+`lean-toolchain` names the Lean release. `lakefile.toml` declares the direct dependency
+revisions; Mathlib and PolyFun arrive through those packages. `lake-manifest.json` records the
+exact resolved revision of every package, so read it, not this page, for the current versions.
+A newer PolyFun revision must be validated against VCVio
 before ArkLib can adopt it, so a VCVio bump and its PolyFun revision move together.
 ArkLib uses native measures throughout its probability statements; the
 [migration ledger](../design/native-measure-ledger.md) records the conversion and upstream API map.
