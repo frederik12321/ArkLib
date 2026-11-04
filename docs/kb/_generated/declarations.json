@@ -7052,7 +7052,7 @@
         {
           "doc": "A flat sequence of `r` scalar verifier challenges.",
           "kind": "def",
-          "line": 116,
+          "line": 147,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.pSpecNestedScalar",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "pSpecNestedScalar",
@@ -7061,7 +7061,7 @@
         {
           "doc": "One scalar verifier challenge for each coordinate of `\u03c4\u2080`, followed by one for each coordinate of `\u03c4\u03b1`.  There are no prover-message rounds between challenges: ArkLib's transcript-tree syntax supports consecutive verifier rounds directly.",
           "kind": "def",
-          "line": 122,
+          "line": 153,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.pSpecNestedZeroCheck",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "pSpecNestedZeroCheck",
@@ -7070,7 +7070,7 @@
         {
           "doc": "",
           "kind": "instance",
-          "line": 125,
+          "line": 156,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.instSampleableTypeChallengePSpecNestedZeroCheck",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "instSampleableTypeChallengePSpecNestedZeroCheck",
@@ -7079,7 +7079,7 @@
         {
           "doc": "Binary special-soundness shape for the zero-check: every scalar verifier round has one coordinate and soundness parameter two, hence exactly two pairwise-distinct children.",
           "kind": "def",
-          "line": 134,
+          "line": 165,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheckStructure",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheckStructure",
@@ -7088,7 +7088,7 @@
         {
           "doc": "The evaluation tree the adapter produces has exactly `2 ^ (m\u2080 + m\u2081)` leaves: `m\u2080 + m\u2081` challenge rounds, two pairwise-distinct children each.",
           "kind": "theorem",
-          "line": 167,
+          "line": 189,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheck_numLeaves",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheck_numLeaves",
@@ -7097,7 +7097,7 @@
         {
           "doc": "With the two arities chosen *minimally* for their pins \u2014 `2 ^ m\u2080 < 2 * A` for `A := (\u03bc + n\u00b7\u03b4) * deg \u03c6` (the `H\u2080` table size, cf. `h\u03bcn`) and `2 ^ m\u2081 < 2 * B` for `B := n` (the row count, cf. `hn`) \u2014 the leaf count is below `4 * A * B`, hence polynomial in the witness dimensions. Both hypotheses are assumptions on the instantiation; see the caveats above.",
           "kind": "theorem",
-          "line": 175,
+          "line": 197,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheck_numLeaves_lt",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheck_numLeaves_lt",
@@ -7106,7 +7106,7 @@
         {
           "doc": "Forget transcript-tree bookkeeping and retain its path-dependent scalar challenge labels as a binary evaluation tree. The two depth equations below are the only arithmetic in this file: ArkLib's `ChallengeTree` is indexed by the *current round*, so an adapter must convert \"rounds remaining\" into a depth. The zero test itself needs no depth arithmetic \u2014 `NestedEvaluationTree.eq_zero_of_vanishes_comp` reads each polynomial through a window of levels instead of projecting the tree.",
           "kind": "theorem",
-          "line": 188,
+          "line": 210,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedRemainingDepth_last",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedRemainingDepth_last",
@@ -7115,7 +7115,7 @@
         {
           "doc": "",
           "kind": "theorem",
-          "line": 191,
+          "line": 213,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedRemainingDepth_succ",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedRemainingDepth_succ",
@@ -7124,7 +7124,7 @@
         {
           "doc": "",
           "kind": "def",
-          "line": 196,
+          "line": 218,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedTreeToEvaluationTree",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedTreeToEvaluationTree",
@@ -7133,7 +7133,7 @@
         {
           "doc": "The suffix of a full scalar-round transcript beginning at round `i`.",
           "kind": "def",
-          "line": 209,
+          "line": 231,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedTranscriptSuffix",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedTranscriptSuffix",
@@ -7142,7 +7142,7 @@
         {
           "doc": "",
           "kind": "theorem",
-          "line": 214,
+          "line": 236,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedTranscriptSuffix_zero",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedTranscriptSuffix_zero",
@@ -7151,7 +7151,7 @@
         {
           "doc": "Extending a scalar transcript along a leaf path preserves every entry already present in its prefix.",
           "kind": "theorem",
-          "line": 225,
+          "line": 247,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedLeafPath_transcript_prefix",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedLeafPath_transcript_prefix",
@@ -7160,7 +7160,7 @@
         {
           "doc": "If an evaluation function vanishes on every transcript below a scalar challenge tree, it vanishes on the corresponding CompPoly evaluation tree.",
           "kind": "theorem",
-          "line": 249,
+          "line": 271,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedTreeToEvaluationTree_vanishes",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedTreeToEvaluationTree_vanishes",
@@ -7169,7 +7169,7 @@
         {
           "doc": "Structured scalar challenge trees convert to sibling-distinct CompPoly evaluation trees.",
           "kind": "theorem",
-          "line": 323,
+          "line": 345,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedTreeToEvaluationTree_isDistinct",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedTreeToEvaluationTree_isDistinct",
@@ -7178,7 +7178,7 @@
         {
           "doc": "Read all scalar challenges from a completed zero-check transcript.",
           "kind": "def",
-          "line": 348,
+          "line": 370,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheckChallenges",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheckChallenges",
@@ -7187,7 +7187,7 @@
         {
           "doc": "The first `m\u2080` transcript challenges, assembled as the direct point `\u03c4\u2080`.",
           "kind": "def",
-          "line": 353,
+          "line": 375,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheckTauZero",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheckTauZero",
@@ -7196,7 +7196,7 @@
         {
           "doc": "The final `m\u2081` transcript challenges, assembled as the direct point `\u03c4\u03b1`.",
           "kind": "def",
-          "line": 358,
+          "line": 380,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheckTauAlpha",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheckTauAlpha",
@@ -7205,16 +7205,16 @@
         {
           "doc": "Extend the lift statement by the direct evaluation points assembled from the scalar-round transcript.",
           "kind": "def",
-          "line": 374,
+          "line": 396,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZcMapStmt",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZcMapStmt",
           "signature": "def nestedZcMapStmt {TCom : Type} (stmt : LiftStatement \u03a6 TCom F n \u03bc)"
         },
         {
-          "doc": "Figure-5 verifier: read `m\u2080 + m\u2081` consecutive scalar challenges, split them into the direct points `\u03c4\u2080` and `\u03c4\u03b1`, and append those points to the statement.",
+          "doc": "Scalar-round verifier: read `m\u2080 + m\u2081` consecutive scalar challenges, split them into the direct points `\u03c4\u2080` and `\u03c4\u03b1`, and append those points to the statement.",
           "kind": "def",
-          "line": 381,
+          "line": 403,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheckVerifier",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheckVerifier",
@@ -7223,34 +7223,34 @@
         {
           "doc": "The nested scalar-round verifier's purity as executable data.  Sequential composition runs this verdict at its seam, so the package stores a `PureForm` rather than recovering a function from a propositional purity witness.",
           "kind": "def",
-          "line": 390,
+          "line": 412,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheckVerifierPureForm",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheckVerifierPureForm",
           "signature": "def nestedZeroCheckVerifierPureForm {TCom : Type} :"
         },
         {
-          "doc": "Figure-5 honest prover. Since all rounds are verifier challenges, its state is the input statement/witness together with the scalar prefix received so far. The stage is generic in the witness type \u2014 it only transports whatever the commitment's openings are. It is consumed by `nestedZeroCheckReduction`, the protocol object this link's completeness is stated about; the `castAdd`/`natAdd` split below is deliberately the same one `nestedZeroCheckVerifier` performs on the transcript, which is what makes the two agree.",
+          "doc": "Honest scalar-round prover. Since all rounds are verifier challenges, its state is the input statement/witness together with the scalar prefix received so far. The stage is generic in the witness type \u2014 it only transports whatever the commitment's openings are. It is consumed by `nestedZeroCheckReduction`, the protocol object this link's completeness is stated about; the `castAdd`/`natAdd` split below is deliberately the same one `nestedZeroCheckVerifier` performs on the transcript, which is what makes the two agree.",
           "kind": "def",
-          "line": 404,
+          "line": 426,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheckProver",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheckProver",
           "signature": "def nestedZeroCheckProver {TCom Wit : Type} :"
         },
         {
-          "doc": "The Figure-5 zero-check **protocol**: the honest prover paired with the verifier. This is the primary object of the link, and it is deliberately computable \u2014 it is what an honest execution runs, what completeness is stated about (`ZeroCheck/Completeness.lean`), and what the extraction rail consumes. The soundness certificate `nestedZeroCheckPackage` is a statement *about* it: that package's `verifier` field is defined as this reduction's verifier, so the two security directions cannot drift apart onto different verifiers. The certificate stays `noncomputable` because it carries an extractor; n",
+          "doc": "The computable scalar-round zero-check protocol, pairing `nestedZeroCheckProver` with `nestedZeroCheckVerifier`. Its verifier is also used by `nestedZeroCheckPackage`.",
           "kind": "def",
-          "line": 425,
+          "line": 441,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheckReduction",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheckReduction",
           "signature": "def nestedZeroCheckReduction {TCom Wit : Type} :"
         },
         {
-          "doc": "Figure-5 point relation: an opening of `t` at which the two computable batching polynomials vanish at the direct points carried by the statement. The `liftShort` conjunct is the commitment's **shortness index**, not a range assumption smuggled in: it is what makes a pair of colliding branch openings a member of `LiftCom.Collision`, hence a Module-SIS break under [NOZ26] Lemma 7 / Remark 2. Its `RhoDigitsShort` half \u2014 the range claim Lemma 10 exists to establish \u2014 is still *derived*, at the batching bridge, from `H\u2080 \u2261 0` (`hZero_eq_zero_imp_liftShort`); it is never assumed here. What this seam ",
+          "doc": "An opening of the statement's commitment satisfying `liftShort`, with both batching polynomials zero at the statement's evaluation points and `bound \u2264 stmt.rlin.bound`. The shortness conjunct ensures that distinct valid openings of the same commitment form a `K.Collision`. This relation asserts evaluations at the statement's points, not zero-polynomial identities.",
           "kind": "def",
-          "line": 443,
+          "line": 454,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.relNestedZeroCheck",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "relNestedZeroCheck",
@@ -7259,7 +7259,7 @@
         {
           "doc": "The canonical all-left leaf: the extractor's output branch, and the comparison base of the collision case.",
           "kind": "def",
-          "line": 456,
+          "line": 467,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedLeftPath",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedLeftPath",
@@ -7268,16 +7268,16 @@
         {
           "doc": "Tree-based extractor for the scalar-round zero-check: directly return the caller-supplied output witness at the canonical all-left leaf. It neither searches the output relation nor branches on acceptance.",
           "kind": "def",
-          "line": 468,
+          "line": 479,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheckExtractor",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheckExtractor",
           "signature": "def nestedZeroCheckExtractor {TCom : Type} :"
         },
         {
-          "doc": "**The zero-check's escape event** (the weak-binding case of the corrected Lemma 10): the tree admits per-leaf `relNestedZeroCheck`-responses among which two are **distinct short openings** of the statement's commitment `t` \u2014 a member of `LiftCom.Collision`, hence a Module-SIS break of the fixed key by [NOZ26] Lemma 7. Against the `ChallengeTree.EscapeEvent` contract: the collision conjunct is an unconditional break at *every* `(statement, tree)`; it mentions neither the extractor, nor acceptance, nor the sampling; and the responses are pinned to the **output** relation, which is what keeps the",
+          "doc": "The tree admits a valid response at every leaf, with two responses forming a `K.Collision`. Every response satisfies `relNestedZeroCheck`, so both colliding responses open the statement's shared commitment and satisfy its shortness condition. This is an existential event on the statement and tree, not an algorithm producing a collision or a bound on that algorithm's cost.",
           "kind": "def",
-          "line": 487,
+          "line": 493,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheckEsc",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheckEsc",
@@ -7286,16 +7286,16 @@
         {
           "doc": "**Correctness core of the nested-tree assembly.** Either two leaves carry distinct openings \u2014 and then, both being short openings of the shared commitment `t`, they are a member of `K.Collision` and the escape event fires \u2014 or every leaf carries one opening `w\u0303`, and the single evaluation tree of depth `m\u2080 + m\u2081` reads `H\u2080` through its first `m\u2080` levels (`Fin.castAdd`) and `H_\u03b1` through its last `m\u2081` (`Fin.natAdd`), so both computable batching polynomials vanish identically and `w\u0303 \u2208 relBatched`. Every conjunct the collision side needs is supplied by `relNestedZeroCheck` itself: commitment agre",
           "kind": "theorem",
-          "line": 510,
+          "line": 516,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedAssembly_escape_or_mem_relBatched",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedAssembly_escape_or_mem_relBatched",
           "signature": "theorem nestedAssembly_escape_or_mem_relBatched"
         },
         {
-          "doc": "**Escape-threaded coordinate-wise special soundness of the nested scalar-round zero-check** (the corrected Hachi Lemma 10), at the named extractor `nestedZeroCheckExtractor`. The weak-binding failure mode is the escape disjunct `nestedZeroCheckEsc`; the extraction side is the evaluation-tree zero test through the two windows of one depth-`m\u2080 + m\u2081` tree. Tree size is machine-checked by `nestedZeroCheck_numLeaves`/`_lt`.",
+          "doc": "Coordinate-wise special soundness at `nestedZeroCheckExtractor`, with `nestedZeroCheckEsc` as the escape event. The extraction argument uses two windows of one depth-`m\u2080 + m\u2081` evaluation tree. `nestedZeroCheck_numLeaves` and `nestedZeroCheck_numLeaves_lt` separately bound the evaluation-tree adapter's leaf count. This theorem bounds neither tree acquisition nor extraction time.",
           "kind": "theorem",
-          "line": 556,
+          "line": 563,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheck_coordinateWiseSpecialSoundWithEscape",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheck_coordinateWiseSpecialSoundWithEscape",
@@ -7304,7 +7304,7 @@
         {
           "doc": "The nested scalar-round zero-check bundled for sequential composition, in the **escape-aware** corner of the package lattice: the verifier is `pure (\u2026)` and never fails, so it is a valid left factor, while the weak-binding case needs the `esc` field. The verifier is taken from `nestedZeroCheckReduction` rather than restated, so this certificate is by construction a statement about the same protocol whose completeness is proved in `ZeroCheck/Completeness.lean`.",
           "kind": "def",
-          "line": 643,
+          "line": 650,
           "name": "ArkLib.Lattices.Ajtai.InnerOuter.nestedZeroCheckPackage",
           "namespace": "ArkLib.Lattices.Ajtai.InnerOuter",
           "short_name": "nestedZeroCheckPackage",
@@ -15882,7 +15882,7 @@
         {
           "doc": "The local constraint map at `(center, received)` on the first-order space.",
           "kind": "def",
-          "line": 60,
+          "line": 61,
           "name": "ReedSolomon.HiddenDerivative.firstOrderLocalConstraintAt",
           "namespace": "ReedSolomon.HiddenDerivative",
           "short_name": "firstOrderLocalConstraintAt",
@@ -15891,7 +15891,7 @@
         {
           "doc": "The local constraint map on the first-order space has rank at most `certifiedEnlargedRankBound 1 m M 0`, at every center and received value and for every `D`. For `m = 0` the space is zero; otherwise it embeds in the exact interpolation space with `d = 1`, degree bound `D + 2`, and agreement threshold `A + 2 \u03bc`.",
           "kind": "theorem",
-          "line": 68,
+          "line": 69,
           "name": "ReedSolomon.HiddenDerivative.finrank_firstOrderLocalConstraintAt_le",
           "namespace": "ReedSolomon.HiddenDerivative",
           "short_name": "finrank_firstOrderLocalConstraintAt_le",
@@ -15900,7 +15900,7 @@
         {
           "doc": "The local constraints at every received point `(centers i, received i)` on the first-order space, as one linear map into the product.",
           "kind": "def",
-          "line": 96,
+          "line": 97,
           "name": "ReedSolomon.HiddenDerivative.firstOrderGlobalConstraintMap",
           "namespace": "ReedSolomon.HiddenDerivative",
           "short_name": "firstOrderGlobalConstraintMap",
@@ -15909,7 +15909,7 @@
         {
           "doc": "Coordinate `i` of `firstOrderGlobalConstraintMap` is the local constraint map at `(centers i, received i)`.",
           "kind": "theorem",
-          "line": 103,
+          "line": 104,
           "name": "ReedSolomon.HiddenDerivative.firstOrderGlobalConstraintMap_apply",
           "namespace": "ReedSolomon.HiddenDerivative",
           "short_name": "firstOrderGlobalConstraintMap_apply",
@@ -15918,7 +15918,7 @@
         {
           "doc": "The constraints at all points of a finite received word have rank at most `card \u03b9 * certifiedEnlargedRankBound 1 m M 0`.",
           "kind": "theorem",
-          "line": 111,
+          "line": 112,
           "name": "ReedSolomon.HiddenDerivative.finrank_firstOrderGlobalConstraintMap_le",
           "namespace": "ReedSolomon.HiddenDerivative",
           "short_name": "finrank_firstOrderGlobalConstraintMap_le",
@@ -15927,7 +15927,7 @@
         {
           "doc": "If `card \u03b9 * certifiedEnlargedRankBound 1 m M 0` is below the number of first-order eligible exponents, some nonzero polynomial in the first-order space satisfies the local constraints at every received point.",
           "kind": "theorem",
-          "line": 123,
+          "line": 124,
           "name": "ReedSolomon.HiddenDerivative.exists_nonzero_firstOrder_interpolant",
           "namespace": "ReedSolomon.HiddenDerivative",
           "short_name": "exists_nonzero_firstOrder_interpolant",
@@ -15936,7 +15936,7 @@
         {
           "doc": "For `0 < D`, if `card \u03b9 * certifiedEnlargedRankBound 1 m M 0` is below `firstOrderDimensionCount D A m M \u03bc`, some nonzero polynomial in the first-order space satisfies the local constraints at every received point.",
           "kind": "theorem",
-          "line": 139,
+          "line": 140,
           "name": "ReedSolomon.HiddenDerivative.exists_nonzero_firstOrder_interpolant_of_dimensionCount",
           "namespace": "ReedSolomon.HiddenDerivative",
           "short_name": "exists_nonzero_firstOrder_interpolant_of_dimensionCount",
@@ -15945,7 +15945,7 @@
         {
           "doc": "Under the hypothesis of `exists_nonzero_firstOrder_interpolant`, some nonzero polynomial `Q` in the first-order space has the following property: for every polynomial `P` with `P (centers i) = received i`, the specialization `Q(X, P, P')` is divisible by `(X - centers i)^m`. The interpolant is chosen before `P`.",
           "kind": "theorem",
-          "line": 152,
+          "line": 153,
           "name": "ReedSolomon.HiddenDerivative.exists_nonzero_firstOrder_interpolant_X_sub_C_pow_dvd",
           "namespace": "ReedSolomon.HiddenDerivative",
           "short_name": "exists_nonzero_firstOrder_interpolant_X_sub_C_pow_dvd",
@@ -50093,7 +50093,7 @@
           "signature": "def HasCapacityLineAgreement (\u03b4 : \u211d) (N : \u2115) (E : \u2115 \u2192 \u211d) : Prop :="
         },
         {
-          "doc": "**Line agreement up to capacity.** At every positive gap `\u03b4`, exact line agreement holds from length `capacityLineLength \u03b4` on with at most `capacityLineConstant \u03b4 * n ^ (capacityLineDerivativeOrder \u03b4 + 1)` exceptional challenges ([DKT26], Theorems 5.13 and 6.8).",
+          "doc": "**Line agreement up to capacity.** At every positive gap `\u03b4`, exact line agreement holds from length `capacityLineLength \u03b4` on with at most `capacityLineConstant \u03b4 * n ^ (capacityLineDerivativeOrder \u03b4 + 1)` exceptional challenges ([DKT26], Theorem 8.1).",
           "kind": "theorem",
           "line": 131,
           "name": "ReedSolomon.capacity_lineAgreement",
@@ -50102,7 +50102,7 @@
           "signature": "theorem capacity_lineAgreement {\u03b4 : \u211d} (h\u03b4 : 0 < \u03b4) :"
         },
         {
-          "doc": "**Line agreement up to capacity, with gap-only constants.** For every `\u03b4 > 0` there are `N \u2265 4`, `d` and `C > 0`, chosen before the code, the field and the received line, such that exact line agreement holds from length `N` on with at most `C n^(d+1)` exceptional challenges ([DKT26], Theorem 6.9).",
+          "doc": "**Line agreement up to capacity, with gap-only constants.** For every `\u03b4 > 0` there are `N \u2265 4`, `d` and `C > 0`, chosen before the code, the field and the received line, such that exact line agreement holds from length `N` on with at most `C n^(d+1)` exceptional challenges ([DKT26], Theorem 8.1).",
           "kind": "theorem",
           "line": 163,
           "name": "ReedSolomon.exists_capacity_lineAgreement",
@@ -50129,7 +50129,7 @@
           "signature": "theorem card_mul_one_sub_capacityRadius {\u03b4 : \u211d} {n k : \u2115} (hn : 0 < n) :"
         },
         {
-          "doc": "**Affine-family agreement from line agreement.** Exact line agreement at a nonnegative gap gives exact affine-family agreement with the same length threshold and exceptional-set bound ([DKT26], Corollary 7.2).",
+          "doc": "**Affine-family agreement from line agreement.** Exact line agreement at a nonnegative gap gives exact affine-family agreement with the same length threshold and exceptional-set bound ([DKT26], Corollary 6.3).",
           "kind": "theorem",
           "line": 205,
           "name": "ReedSolomon.HasCapacityLineAgreement.affineAgreement",
@@ -50138,7 +50138,7 @@
           "signature": "theorem HasCapacityLineAgreement.affineAgreement {\u03b4 : \u211d} {N : \u2115} {E : \u2115 \u2192 \u211d}"
         },
         {
-          "doc": "**Affine-family agreement up to capacity, with gap-only constants.** For every `\u03b4 > 0` there are `N \u2265 4`, `d` and `C > 0` such that exact affine-family agreement holds from length `N` on with exceptional density at most `C n^(d+1) / (|F| - 1)` in every number of directions ([DKT26], Theorem 6.9 and Corollary 7.2).",
+          "doc": "**Affine-family agreement up to capacity, with gap-only constants.** For every `\u03b4 > 0` there are `N \u2265 4`, `d` and `C > 0` such that exact affine-family agreement holds from length `N` on with exceptional density at most `C n^(d+1) / (|F| - 1)` in every number of directions ([DKT26], Theorem 8.1 and Corollary 6.3).",
           "kind": "theorem",
           "line": 224,
           "name": "ReedSolomon.exists_capacity_affineAgreement",
@@ -50156,7 +50156,7 @@
           "signature": "theorem HasCapacityLineAgreement.mcaError_le {\u03b4 : \u211d} {N : \u2115} {E : \u2115 \u2192 \u211d}"
         },
         {
-          "doc": "**MCA errors up to capacity, with gap-only constants.** For every `\u03b4 > 0` there are `N \u2265 4`, `d` and `C > 0` such that every Reed\u2013Solomon code of length `n \u2265 N` over a finite field of characteristic zero or larger than `k - 1` has MCA error at radius `capacityRadius \u03b4 n k = 1 - k / n - \u03b4` at most `C n^(d+1) / |F|` for lines and at most `C n^(d+1) / (|F| - 1)` for affine spaces of every dimension ([DKT26], Theorem 6.9 and Corollary 7.2).",
+          "doc": "**MCA errors up to capacity, with gap-only constants.** For every `\u03b4 > 0` there are `N \u2265 4`, `d` and `C > 0` such that every Reed\u2013Solomon code of length `n \u2265 N` over a finite field of characteristic zero or larger than `k - 1` has MCA error at radius `capacityRadius \u03b4 n k = 1 - k / n - \u03b4` at most `C n^(d+1) / |F|` for lines and at most `C n^(d+1) / (|F| - 1)` for affine spaces of every dimension ([DKT26], Theorem 8.1 and Corollary 6.3).",
           "kind": "theorem",
           "line": 256,
           "name": "ReedSolomon.exists_capacity_mcaError",
@@ -50237,7 +50237,7 @@
           "signature": "def HasCapacityPowerBatchingAgreement (\u03b4 : \u211d) (N \u03bd : \u2115) (E : \u2115 \u2192 \u2115 \u2192 \u211d) : Prop :="
         },
         {
-          "doc": "**Power-batching agreement up to capacity.** At every positive gap `\u03b4`, exact power-batching agreement holds from length `capacityPowerLength \u03b4` on, with characteristic bound `capacityPowerJetBound \u03b4` and at most `\u2113 * capacityPowerConstant \u03b4 * n ^ (capacityPowerDerivativeOrder \u03b4 + 1)` exceptional challenges ([DKT26], Corollary 7.3).",
+          "doc": "**Power-batching agreement up to capacity.** At every positive gap `\u03b4`, exact power-batching agreement holds from length `capacityPowerLength \u03b4` on, with characteristic bound `capacityPowerJetBound \u03b4` and at most `\u2113 * capacityPowerConstant \u03b4 * n ^ (capacityPowerDerivativeOrder \u03b4 + 1)` exceptional challenges ([DKT26], Corollary 8.6 and Theorem 8.1).",
           "kind": "theorem",
           "line": 326,
           "name": "ReedSolomon.capacity_powerBatchingAgreement",
@@ -50246,7 +50246,7 @@
           "signature": "theorem capacity_powerBatchingAgreement {\u03b4 : \u211d} (h\u03b4 : 0 < \u03b4) :"
         },
         {
-          "doc": "**Power-batching agreement up to capacity, with gap-only constants.** For every `\u03b4 > 0` there are `N \u2265 4`, `d`, a characteristic bound `\u03bd < N` and `C > 0`, chosen before the batching degree, the code, the field and the rows, such that exact power-batching agreement holds from length `N` on with at most `\u2113 C n^(d+1)` exceptional challenges ([DKT26], Corollary 7.3).",
+          "doc": "**Power-batching agreement up to capacity, with gap-only constants.** For every `\u03b4 > 0` there are `N \u2265 4`, `d`, a characteristic bound `\u03bd < N` and `C > 0`, chosen before the batching degree, the code, the field and the rows, such that exact power-batching agreement holds from length `N` on with at most `\u2113 C n^(d+1)` exceptional challenges ([DKT26], Corollary 8.6 and Theorem 8.1).",
           "kind": "theorem",
           "line": 375,
           "name": "ReedSolomon.exists_capacity_powerBatchingAgreement",
@@ -77232,7 +77232,7 @@
         {
           "doc": "**Chain witnesses at one point.** Over a finite domain with `q` elements, let `roots` be a finite set of polynomials of degree at most `D`, and assume the binomial hypothesis `((k + s).choose s : F) \u2260 0` for `0 < k`, `k + s \u2264 D`. Then at most `jetTotalDegree Q * q ^ d` elements of `roots` have `a` as a chain witness. If `initialJetEquation a Q = 0` there are none (`ChainWitness.initialJetEquation_ne_zero`). Otherwise their Hasse jets at `a` are distinct zeros of `initialJetEquation a Q`, a nonzero polynomial in `d + 1` variables of total degree at most `jetTotalDegree Q`.",
           "kind": "theorem",
-          "line": 75,
+          "line": 77,
           "name": "PolynomialDifferential.card_filter_chainWitness_le",
           "namespace": "PolynomialDifferential",
           "short_name": "card_filter_chainWitness_le",
@@ -77241,7 +77241,7 @@
         {
           "doc": "**Counting solutions by the total jet degree.** Let `F` be a finite domain with `q` elements, `Q \u2260 0` satisfying the cast hypotheses at every jet, and `roots` a finite set of solutions of `Q = 0` of degree at most `D`. If `((k + s).choose s : F) \u2260 0` for `0 < k`, `k + s \u2264 D`, and `differentialWeightedDegree D Q - (D - d) \u2264 H`, then `#roots * (q - H) \u2264 q * (jetTotalDegree Q * q ^ d)`. Every solution has at most `H` points that are not chain witnesses (`exists_chainWitness`), and every point is a chain witness for at most `jetTotalDegree Q * q ^ d` solutions (`card_filter_chainWitness_le`). Trun",
           "kind": "theorem",
-          "line": 120,
+          "line": 122,
           "name": "PolynomialDifferential.card_mul_sub_le_jetTotalDegree_mul",
           "namespace": "PolynomialDifferential",
           "short_name": "card_mul_sub_le_jetTotalDegree_mul",
@@ -77250,7 +77250,7 @@
         {
           "doc": "`card_mul_sub_le_jetTotalDegree_mul` for all solutions of degree at most `D`: `Nat.card (BoundedSolution Q D) * (q - H) \u2264 q * (jetTotalDegree Q * q ^ d)`.",
           "kind": "theorem",
-          "line": 148,
+          "line": 150,
           "name": "PolynomialDifferential.BoundedSolution.natCard_mul_sub_le_jetTotalDegree_mul",
           "namespace": "PolynomialDifferential",
           "short_name": "BoundedSolution.natCard_mul_sub_le_jetTotalDegree_mul",
@@ -77259,7 +77259,7 @@
         {
           "doc": "**At most `2 * jetTotalDegree Q * q ^ d` solutions.** Under the hypotheses of `BoundedSolution.natCard_mul_sub_le_jetTotalDegree_mul`, if `2 * H \u2264 q` then `Q = 0` has at most `2 * jetTotalDegree Q * q ^ d` solutions of degree at most `D`: at least half of the points are chain witnesses for each solution.",
           "kind": "theorem",
-          "line": 169,
+          "line": 171,
           "name": "PolynomialDifferential.BoundedSolution.natCard_le_two_mul_jetTotalDegree_mul",
           "namespace": "PolynomialDifferential",
           "short_name": "BoundedSolution.natCard_le_two_mul_jetTotalDegree_mul",
@@ -77268,7 +77268,7 @@
         {
           "doc": "**Witnesses in a larger domain.** Let `f : F \u2192+* E` be an injective ring homomorphism into a finite domain `E`. If `Q \u2260 0` satisfies the cast hypotheses, `((k + s).choose s : F) \u2260 0` for `0 < k`, `k + s \u2264 D`, `differentialWeightedDegree D Q - (D - d) \u2264 H` and `2 * H \u2264 Nat.card E`, then `Q = 0` has at most `2 * jetTotalDegree Q * Nat.card E ^ d` solutions over `F` of degree at most `D`. The solutions over `F` inject into those of `Q.map f` over `E` (`BoundedSolution.natCard_le_natCard_map`), and every hypothesis transfers along `f`. `F` itself need not be finite or a domain.",
           "kind": "theorem",
-          "line": 195,
+          "line": 197,
           "name": "PolynomialDifferential.BoundedSolution.natCard_le_two_mul_jetTotalDegree_mul_of_injective",
           "namespace": "PolynomialDifferential",
           "short_name": "BoundedSolution.natCard_le_two_mul_jetTotalDegree_mul_of_injective",
@@ -77277,7 +77277,7 @@
         {
           "doc": "**Witnesses in the extension of degree `e`.** Over a finite field `F` with `q` elements, under the hypotheses of `BoundedSolution.natCard_le_two_mul_jetTotalDegree_mul` with `2 * H \u2264 q ^ e` for some `0 < e`, `Q = 0` has at most `2 * jetTotalDegree Q * q ^ (e * d)` solutions of degree at most `D`. The witnesses are taken in `FiniteField.Extension F (ringChar F) e`, which has `q ^ e` elements; the hypotheses stay those over `F`.",
           "kind": "theorem",
-          "line": 222,
+          "line": 224,
           "name": "PolynomialDifferential.BoundedSolution.natCard_le_two_mul_jetTotalDegree_mul_extension",
           "namespace": "PolynomialDifferential",
           "short_name": "BoundedSolution.natCard_le_two_mul_jetTotalDegree_mul_extension",
@@ -99810,7 +99810,7 @@
         {
           "doc": "The relation `x \u2261\u1d62 y`: the coordinate-vectors `x` and `y` agree in every coordinate except the `i`-th, where they differ. For `\u2113 = 1` this is just `x 0 \u2260 y 0`.",
           "kind": "def",
-          "line": 74,
+          "line": 79,
           "name": "CoordinateWise.CoordEq",
           "namespace": "CoordinateWise",
           "short_name": "CoordEq",
@@ -99819,16 +99819,16 @@
         {
           "doc": "`\u2261\u1d62` is decidable over a decidable alphabet: finitely many coordinates, each compared by `DecidableEq`. This is what lets the star-center search (`CoordinateWise.SingleRound.central` / `sib`) run rather than choose classically, hence what keeps tree extractors executable.",
           "kind": "instance",
-          "line": 80,
+          "line": 85,
           "name": "CoordinateWise.instDecidableCoordEq",
           "namespace": "CoordinateWise",
           "short_name": "instDecidableCoordEq",
           "signature": "instance instDecidableCoordEq [DecidableEq S] {\u2113 : \u2115} (i : Fin \u2113) (x y : Fin \u2113 \u2192 S) :"
         },
         {
-          "doc": "A family of `\u2113\u00b7(k-1)+1` coordinate-vectors `c` is **coordinate-wise special sound**, i.e. lies in `SS(S, \u2113, k)`, if - the `\u2113\u00b7(k-1)+1` vectors are pairwise distinct (`Function.Injective c`), and - there is a *central* index `e` such that for every coordinate `i \u2208 Fin \u2113` there are `k-1` other indices whose vectors agree with `c e` off coordinate `i` (and differ on it). This is the precise rendering of the set `SS(S, \u2113, k)` from [FMN24] Def. 2.9 / [NOZ26] \u00a72.3. In the paper `SS(S, \u2113, k)` is a *set* `{x\u2081, \u2026, x_K}` of `K := \u2113\u00b7(k-1)+1` **distinct** vectors; the `Function.Injective c` clause is what ",
+          "doc": "A family of `\u2113\u00b7(k-1)+1` coordinate-vectors `c` is coordinate-wise special sound if its vectors are pairwise distinct and it has a central index with `k-1` siblings for each coordinate. Those siblings agree with the center off that coordinate and differ from it there. The index type fixes the branching arity. `Function.Injective c` excludes repeated vectors; since siblings agree off the selected coordinate, their values at that coordinate are pairwise distinct as well.",
           "kind": "def",
-          "line": 98,
+          "line": 95,
           "name": "CoordinateWise.IsSpecialSoundFamily",
           "namespace": "CoordinateWise",
           "short_name": "IsSpecialSoundFamily",
@@ -99837,7 +99837,7 @@
         {
           "doc": "For `\u2113 = 1`, coordinate-wise special soundness is ordinary `k`-special soundness: the challenge values are distinct, and there is a central vector together with `k - 1` siblings differing in the single coordinate \u2014 i.e. `k` pairwise-distinct challenge values.",
           "kind": "theorem",
-          "line": 107,
+          "line": 104,
           "name": "CoordinateWise.isSpecialSoundFamily_one",
           "namespace": "CoordinateWise",
           "short_name": "isSpecialSoundFamily_one",
@@ -99846,7 +99846,7 @@
         {
           "doc": "For a single coordinate (`\u2113 = 1`), membership in the special-sound family `SS(S, 1, k)` is exactly injectivity of the `k` challenge vectors: a central vector together with `k-1` siblings differing in the unique coordinate is just `k` pairwise-distinct values. This is the cleaner `\u2113 = 1` characterization underlying the bridge to plain `k`-special soundness.",
           "kind": "theorem",
-          "line": 128,
+          "line": 125,
           "name": "CoordinateWise.isSpecialSoundFamily_one_iff_injective",
           "namespace": "CoordinateWise",
           "short_name": "isSpecialSoundFamily_one_iff_injective",
@@ -99855,7 +99855,7 @@
         {
           "doc": "A **coordinate-wise special-soundness structure** for a protocol `pSpec`. For each challenge round `i` it provides: - the positive number `coordIndex i = \u2113\u1d62` of coordinates, - the per-coordinate alphabet `alphabet i = S\u1d62`, - an identification `decompose i : Challenge i \u2243 S\u1d62^{\u2113\u1d62}` of the challenge as a coordinate-vector, - the non-trivial soundness parameter `soundnessParam i = k\u1d62`, - the induced branching arity `\u2113\u1d62\u00b7(k\u1d62-1)+1`. The branching arity it induces at round `i` is `arity i = \u2113\u1d62\u00b7(k\u1d62-1)+1`.",
           "kind": "structure",
-          "line": 158,
+          "line": 155,
           "name": "CWSSStructure",
           "namespace": "",
           "short_name": "CWSSStructure",
@@ -99864,7 +99864,7 @@
         {
           "doc": "**Every coordinate-wise structure branches at least once**: the arity `\u2113\u1d62\u00b7(k\u1d62\u22121)+1` is positive whatever `\u2113\u1d62` and `k\u1d62` are. Consumed by `ChallengeTree.LeafPath.some` to produce a transcript of an arbitrary structured subtree, which is what rules out a rejecting prefix in the guarded composition.",
           "kind": "theorem",
-          "line": 182,
+          "line": 179,
           "name": "CWSSStructure.arity_pos",
           "namespace": "CWSSStructure",
           "short_name": "arity_pos",
@@ -99873,7 +99873,7 @@
         {
           "doc": "The coordinate count `\u2113\u1d62` as a natural number.",
           "kind": "abbrev",
-          "line": 187,
+          "line": 184,
           "name": "CWSSStructure.ell",
           "namespace": "CWSSStructure",
           "short_name": "ell",
@@ -99882,7 +99882,7 @@
         {
           "doc": "The soundness parameter `k\u1d62` as a natural number.",
           "kind": "abbrev",
-          "line": 190,
+          "line": 187,
           "name": "CWSSStructure.k",
           "namespace": "CWSSStructure",
           "short_name": "k",
@@ -99891,7 +99891,7 @@
         {
           "doc": "The coordinate-wise node predicate at a challenge round.",
           "kind": "def",
-          "line": 193,
+          "line": 190,
           "name": "CWSSStructure.nodeOk",
           "namespace": "CWSSStructure",
           "short_name": "nodeOk",
@@ -99900,7 +99900,7 @@
         {
           "doc": "The generic challenge-tree shape induced by a CWSS structure.",
           "kind": "def",
-          "line": 200,
+          "line": 197,
           "name": "CWSSStructure.toShape",
           "namespace": "CWSSStructure",
           "short_name": "toShape",
@@ -99909,7 +99909,7 @@
         {
           "doc": "Every CWSS shape branches: the arity `\u2113\u1d62\u00b7(k\u1d62-1)+1` is positive at every challenge round. The generic tree-soundness notion is unconditioned in the arity, but the guarded-left composition theorems need a suffix leaf to probe; this is what discharges their positivity hypothesis at every CWSS call site.",
           "kind": "theorem",
-          "line": 209,
+          "line": 206,
           "name": "CWSSStructure.toShape_arity_pos",
           "namespace": "CWSSStructure",
           "short_name": "toShape_arity_pos",
@@ -99918,7 +99918,7 @@
         {
           "doc": "The canonical coordinate-wise structure underlying plain `k`-special soundness: every challenge has a single coordinate (`\u2113\u1d62 = 1`) over the alphabet `Challenge i`, with soundness parameters `k`. Used to relate `k`-special soundness to CWSS as the `\u2113\u1d62 = 1` case. Marked `@[reducible]` so that instances on `pSpec.Challenge i` (e.g. `Fintype`, `SampleableType`) are found for `(ofSpecialSound k).alphabet i`.",
           "kind": "def",
-          "line": 220,
+          "line": 217,
           "name": "CWSSStructure.ofSpecialSound",
           "namespace": "CWSSStructure",
           "short_name": "ofSpecialSound",
@@ -99927,16 +99927,16 @@
         {
           "doc": "A named tree-based extractor `Ext` **witnesses coordinate-wise special soundness** of a verifier: `Verifier.treeSpecialSoundWith` at the CWSS shape `D.toShape`. On every `D`-structured accepting tree and every valid leaf witnessing of it, `Ext` succeeds with a `relIn`-witness. This named form is the content-bearing statement (see `Verifier.treeSpecialSoundWith`); its existential closure is `Verifier.coordinateWiseSpecialSound`. Advertised protocol theorems should state this form at the protocol's actual extractor; the `CoordinateWise` packages carry the extractor as a field and their `isCWSS` ",
           "kind": "def",
-          "line": 254,
+          "line": 251,
           "name": "Verifier.coordinateWiseSpecialSoundWith",
           "namespace": "Verifier",
           "short_name": "coordinateWiseSpecialSoundWith",
           "signature": "def coordinateWiseSpecialSoundWith (D : CWSSStructure pSpec)"
         },
         {
-          "doc": "A verifier is **coordinate-wise special sound** with respect to a coordinate-wise structure `D`, an input relation `relIn` and an output relation `relOut` if it is tree-special-sound for the generic shape induced by `D`. This is the multi-round coordinate-wise special soundness of [NOZ26] Def. 3 / [FMN24] Def. 2.10, phrased over ArkLib's IOR machinery. The papers' accept/reject condition is represented by the language of the output relation. Specializing `D` to `CWSSStructure.ofSpecialSound k` corresponds to the standard notion of `k`-special soundness. The extractor is existential (inherited ",
+          "doc": "Coordinate-wise special soundness for the tree shape induced by `D`, with input relation `relIn` and output relation `relOut`. Acceptance is represented by the output relation's language. Specializing `D` to `CWSSStructure.ofSpecialSound k` gives ordinary `k`-special soundness. This form quantifies existentially over an extractor; `coordinateWiseSpecialSoundWith` retains its identity. Neither form bounds extraction time. Use the escape variants when the conclusion may instead establish a `ChallengeTree.EscapeEvent`.",
           "kind": "def",
-          "line": 274,
+          "line": 264,
           "name": "Verifier.coordinateWiseSpecialSound",
           "namespace": "Verifier",
           "short_name": "coordinateWiseSpecialSound",
@@ -99945,7 +99945,7 @@
         {
           "doc": "The existential notion is definitionally the existential closure of the named one.",
           "kind": "theorem",
-          "line": 281,
+          "line": 271,
           "name": "Verifier.coordinateWiseSpecialSound_iff_exists",
           "namespace": "Verifier",
           "short_name": "coordinateWiseSpecialSound_iff_exists",
@@ -99954,7 +99954,7 @@
         {
           "doc": "Forget the name of the extractor.",
           "kind": "theorem",
-          "line": 289,
+          "line": 279,
           "name": "Verifier.coordinateWiseSpecialSoundWith.toCWSS",
           "namespace": "Verifier",
           "short_name": "coordinateWiseSpecialSoundWith.toCWSS",
@@ -99963,7 +99963,7 @@
         {
           "doc": "**The unconditioned reading of a CWSS certificate**: `treeSpecialSoundWith`'s closer at the CWSS shape. Closing the named extractor with the canonical witnessing (`ChallengeTree.canonWitnesses`) drops the validity premise, at the cost of `[Inhabited WitIn]` and nothing else.",
           "kind": "theorem",
-          "line": 301,
+          "line": 291,
           "name": "Verifier.coordinateWiseSpecialSoundWith.mem_relIn_of_isAccepting",
           "namespace": "Verifier",
           "short_name": "coordinateWiseSpecialSoundWith.mem_relIn_of_isAccepting",
@@ -99972,7 +99972,7 @@
         {
           "doc": "**Escape-threaded CWSS, named form**: `Verifier.treeSpecialSoundWithEscape` at the CWSS shape `D.toShape`, i.e. on every structured accepting tree either the tree exhibits the escape event `esc` (a trusted spec \u2014 `ChallengeTree.EscapeEvent`) or `Ext` produces a `relIn`-witness from every valid leaf witnessing.",
           "kind": "def",
-          "line": 324,
+          "line": 314,
           "name": "Verifier.coordinateWiseSpecialSoundWithEscape",
           "namespace": "Verifier",
           "short_name": "coordinateWiseSpecialSoundWithEscape",
@@ -99981,7 +99981,7 @@
         {
           "doc": "Existential closure of `coordinateWiseSpecialSoundWithEscape`. The named form is preferred in advertised statements, since a composed chain then exposes a runnable end-to-end extractor. **This form has no consumer, by design** \u2014 see `Verifier.treeSpecialSoundEscape`. It is not \"kept for plumbing\": every escape append now names its right factor's extractor, and reverting one to this form would break the runnable composed chain.",
           "kind": "def",
-          "line": 337,
+          "line": 327,
           "name": "Verifier.coordinateWiseSpecialSoundEscape",
           "namespace": "Verifier",
           "short_name": "coordinateWiseSpecialSoundEscape",
@@ -99990,7 +99990,7 @@
         {
           "doc": "Forget the name of the extractor (escape-threaded).",
           "kind": "theorem",
-          "line": 345,
+          "line": 335,
           "name": "Verifier.coordinateWiseSpecialSoundWithEscape.toEscape",
           "namespace": "Verifier",
           "short_name": "coordinateWiseSpecialSoundWithEscape.toEscape",
@@ -99999,7 +99999,7 @@
         {
           "doc": "**The unconditioned reading of an escape-threaded CWSS certificate**, the closer for the notion every Hachi link actually carries: on a structured accepting tree, either the escape event fires or the recovered witness is in `relIn`, with no witnessing premise in the statement. The escape disjunct is untouched by the closing, which is exactly what the quantifier order of `Verifier.treeSpecialSoundWithEscape` buys. See `Verifier.treeSpecialSoundWithEscape.escape_or_mem_relIn_of_isAccepting` for what this reading does and does not say: it recovers the *non-algorithmic* statement, as a migration r",
           "kind": "theorem",
-          "line": 363,
+          "line": 353,
           "name": "Verifier.coordinateWiseSpecialSoundWithEscape.escape_or_mem_relIn_of_isAccepting",
           "namespace": "Verifier",
           "short_name": "coordinateWiseSpecialSoundWithEscape.escape_or_mem_relIn_of_isAccepting",
@@ -100008,7 +100008,7 @@
         {
           "doc": "**Lossless escape lift at the CWSS shape** (the entry point for the packages' kind lifts): a plain CWSS certificate holds at any escape event, via the right disjunct.",
           "kind": "theorem",
-          "line": 381,
+          "line": 371,
           "name": "Verifier.coordinateWiseSpecialSoundWith.withEscape",
           "namespace": "Verifier",
           "short_name": "coordinateWiseSpecialSoundWith.withEscape",
@@ -100017,7 +100017,7 @@
         {
           "doc": "At the never-firing event escape-threaded CWSS is plain CWSS.",
           "kind": "theorem",
-          "line": 392,
+          "line": 382,
           "name": "Verifier.coordinateWiseSpecialSoundWithEscape_false_iff",
           "namespace": "Verifier",
           "short_name": "coordinateWiseSpecialSoundWithEscape_false_iff",
@@ -100026,7 +100026,7 @@
         {
           "doc": "Escape events are monotone at the CWSS shape.",
           "kind": "theorem",
-          "line": 402,
+          "line": 392,
           "name": "Verifier.coordinateWiseSpecialSoundWithEscape.mono",
           "namespace": "Verifier",
           "short_name": "coordinateWiseSpecialSoundWithEscape.mono",
@@ -100035,7 +100035,7 @@
         {
           "doc": "A named tree-based extractor witnesses coordinate-wise special soundness of an oracle reduction: `Verifier.coordinateWiseSpecialSoundWith` of the underlying non-oracle verifier on the combined (oracle + non-oracle) statements. The named form is the content-bearing statement (see `Verifier.treeSpecialSoundWith`).",
           "kind": "def",
-          "line": 436,
+          "line": 426,
           "name": "OracleVerifier.coordinateWiseSpecialSoundWith",
           "namespace": "OracleVerifier",
           "short_name": "coordinateWiseSpecialSoundWith",
@@ -100044,7 +100044,7 @@
         {
           "doc": "Coordinate-wise special soundness of an oracle reduction, defined (as for round-by-round notions) via the underlying non-oracle verifier on the combined (oracle + non-oracle) statements. As at the non-oracle level, the extractor is existential, so prefer `coordinateWiseSpecialSoundWith` at a named extractor for advertised statements.",
           "kind": "def",
-          "line": 449,
+          "line": 439,
           "name": "OracleVerifier.coordinateWiseSpecialSound",
           "namespace": "OracleVerifier",
           "short_name": "coordinateWiseSpecialSound",
@@ -100053,7 +100053,7 @@
         {
           "doc": "Forget the name of the extractor (oracle level).",
           "kind": "theorem",
-          "line": 457,
+          "line": 447,
           "name": "OracleVerifier.coordinateWiseSpecialSoundWith.toCWSS",
           "namespace": "OracleVerifier",
           "short_name": "coordinateWiseSpecialSoundWith.toCWSS",
@@ -100062,7 +100062,7 @@
         {
           "doc": "Escape-threaded CWSS of an oracle reduction, **named form**: the non-oracle escape notion of the underlying verifier on the combined (oracle + non-oracle) statements. The escape event is indexed by the combined input statement, so it may read the oracle statements.",
           "kind": "def",
-          "line": 469,
+          "line": 459,
           "name": "OracleVerifier.coordinateWiseSpecialSoundWithEscape",
           "namespace": "OracleVerifier",
           "short_name": "coordinateWiseSpecialSoundWithEscape",
@@ -100071,7 +100071,7 @@
         {
           "doc": "Existential closure of the oracle-level escape-threaded CWSS. Like its non-oracle counterpart `Verifier.coordinateWiseSpecialSoundEscape`, this has **no consumer by design**; prefer the named form in advertised statements.",
           "kind": "def",
-          "line": 482,
+          "line": 472,
           "name": "OracleVerifier.coordinateWiseSpecialSoundEscape",
           "namespace": "OracleVerifier",
           "short_name": "coordinateWiseSpecialSoundEscape",
@@ -100080,7 +100080,7 @@
         {
           "doc": "Forget the name of the extractor (oracle level, escape-threaded).",
           "kind": "theorem",
-          "line": 492,
+          "line": 482,
           "name": "OracleVerifier.coordinateWiseSpecialSoundWithEscape.toEscape",
           "namespace": "OracleVerifier",
           "short_name": "coordinateWiseSpecialSoundWithEscape.toEscape",
